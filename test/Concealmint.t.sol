@@ -2,10 +2,10 @@
 pragma solidity ^0.8.22;
 
 import {Test, console} from "forge-std/Test.sol";
-import {SafeMints} from "../src/SafeMints.sol";
+import {Concealmint} from "../src/Concealmint.sol";
 
-contract SafeMintsTest is Test {
-    SafeMints public nft;
+contract ConcealTest is Test {
+    Concealmint public nft;
     address public owner;
     address public minter;
 
@@ -13,7 +13,7 @@ contract SafeMintsTest is Test {
         owner = makeAddr("owner");
         minter = makeAddr("minter");
         vm.prank(owner);
-        nft = new SafeMints();
+        nft = new Concealmint();
         vm.startPrank(owner);
     }
 

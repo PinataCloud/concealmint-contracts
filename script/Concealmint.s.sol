@@ -2,17 +2,17 @@
 pragma solidity ^0.8.22;
 
 import {Script, console} from "forge-std/Script.sol";
-import {SafeMints} from "../src/SafeMints.sol";
+import {Concealmint} from "../src/Concealmint.sol";
 
-contract SafeMintsScript is Script {
-    SafeMints public safeMints;
+contract ConcealmintScript is Script {
+    Concealmint public concealmint;
 
     function setUp() public {}
 
     function run() public {
         vm.startBroadcast();
 
-        safeMints = new SafeMints();
+        concealmint = new Concealmint();
 
         vm.stopBroadcast();
     }

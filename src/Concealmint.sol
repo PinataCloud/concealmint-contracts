@@ -8,7 +8,7 @@ import {ERC721Pausable} from "@openzeppelin/contracts/token/ERC721/extensions/ER
 import {ERC721URIStorage} from "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
-contract SafeMints is
+contract Concealmint is
     ERC721,
     ERC721URIStorage,
     ERC721Pausable,
@@ -17,7 +17,7 @@ contract SafeMints is
 {
     uint256 private _nextTokenId;
 
-    constructor() ERC721("SafeMints", "SFMNT") Ownable(msg.sender) {}
+    constructor() ERC721("Concealmint", "CM") Ownable(msg.sender) {}
 
     function pause() public onlyOwner {
         _pause();
