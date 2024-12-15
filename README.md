@@ -1,17 +1,13 @@
-## Foundry
+## Concealmint Contacts
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+![cover](./assets/og.png)
 
-Foundry consists of:
+This repo contains the main ERC721 contract used for [CONCEALMINT](https://concealmint.com) that features a few small differences than the default contract:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
+- `safeMint` is made public so anyone can mint
+- `safeMint` will mint directly to `msg.sender` instead of taking an `address` parameter
+- `safeMint` accepts a `uri` parameter on mint as the content is dynamic
+- `constructor` does not take in an owner address, instead the `Ownable` constructor uses `msg.sender`
 
 ## Usage
 
